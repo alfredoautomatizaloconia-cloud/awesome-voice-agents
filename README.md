@@ -22,6 +22,8 @@ Add WeChat | 添加微信: **1796060717**
 - [STT (Speech-to-Text) | 语音转文本](#stt-speech-to-text--语音转文本)
 - [TTS (Text-to-Speech) | 文本转语音](#tts-text-to-speech--文本转语音)
 - [End-to-End Speech Models | 端到端语音模型](#end-to-end-speech-models--端到端语音模型)
+- [Voice MCP & Coding Agent Voice | 语音 MCP 与编程 Agent 语音](#voice-mcp--coding-agent-voice--语音-mcp-与编程-agent-语音)
+- [Toolkits, Wake Word & Voice Conversion | 语音工具箱, 唤醒词与变声](#toolkits-wake-word--voice-conversion--语音工具箱-唤醒词与变声)
 - [Developer Communities & Resources | 开发者社区与资源](#developer-communities--resources--开发者社区与资源)
 - [Learning Resources | 学习资源](#learning-resources--学习资源)
 - [Related Awesome Lists | 相关资源](#related-awesome-lists--相关资源)
@@ -47,6 +49,13 @@ Add WeChat | 添加微信: **1796060717**
 | [Bolna](https://github.com/bolna-ai/bolna) | ![GitHub Repo stars](https://badgen.net/github/stars/bolna-ai/bolna) | End-to-end open source production-ready voice agents platform. Build voice assistants through JSON config. | 生产就绪，支持 Twilio/Plivo |
 | [LLMRTC](https://github.com/llmrtc/llmrtc) | ![GitHub Repo stars](https://badgen.net/github/stars/llmrtc/llmrtc) | Open-source WebRTC orchestration SDK. Handles server-side VAD, barge-in, and multi-provider switching. | **WebRTC-based**, **Low Latency**. Infrastructure-agnostic. |
 | [Ultravox](https://github.com/fixie-ai/ultravox) | ![GitHub Repo stars](https://badgen.net/github/stars/fixie-ai/ultravox) | Fast multimodal LLM for real-time voice. Understands speech directly without a separate STT step, low time-to-first-token. | 直接理解语音，无需独立 STT，首字延迟低 |
+| [Unmute (Kyutai)](https://github.com/kyutai-labs/unmute) | ![GitHub Repo stars](https://badgen.net/github/stars/kyutai-labs/unmute) | Modular pipeline (Kyutai STT + any LLM + Kyutai TTS) that turns any text LLM into a low-latency voice agent. Docker + vLLM composable. | Kyutai 出品，把任意文本 LLM 包成实时语音体 |
+| [FastRTC](https://github.com/gradio-app/fastrtc) | ![GitHub Repo stars](https://badgen.net/github/stars/gradio-app/fastrtc) | Turn any Python function into a real-time WebRTC/WebSocket audio-video stream. Built-in VAD, turn-taking, STT/TTS, even a free temp phone number. | HuggingFace 生态，几行代码搞定实时语音流 |
+| [Speaches](https://github.com/speaches-ai/speaches) | ![GitHub Repo stars](https://badgen.net/github/stars/speaches-ai/speaches) | "Ollama for TTS/STT": OpenAI-API-compatible self-hosted server (faster-whisper + Kokoro/Piper) with a `/v1/realtime` WebSocket endpoint. | 自托管语音服务器，兼容 OpenAI API，全本地 |
+| [Gabber](https://github.com/gabber-dev/gabber) | ![GitHub Repo stars](https://badgen.net/github/stars/gabber-dev/gabber) | Source-available engine for real-time multimodal agents that see, hear, and speak. React/Python/Unity SDKs. | 实时多模态智能体引擎，可看可听可说 |
+| [Dograh](https://github.com/dograh-hq/dograh) | ![GitHub Repo stars](https://badgen.net/github/stars/dograh-hq/dograh) | Self-hosted open-source Vapi/Retell alternative with drag-and-drop visual workflow builder, BYOK, MCP-native and telephony built in. | 自托管的可视化拖拽语音流程编排，自带电话与 MCP |
+| [huggingface/speech-to-speech](https://github.com/huggingface/speech-to-speech) | ![GitHub Repo stars](https://badgen.net/github/stars/huggingface/speech-to-speech) | Modular STT→LLM→TTS pipeline to build local voice agents entirely from open-source models. | 用开源模型搭本地语音 Agent 流水线 |
+| [Rasa](https://github.com/RasaHQ/rasa) | ![GitHub Repo stars](https://badgen.net/github/stars/RasaHQ/rasa) | Mature open-source NLU + dialogue-management framework (now with the LLM-driven CALM engine) for text and voice assistants. | 老牌开源对话框架，CALM 引擎结合 LLM 与业务逻辑 |
 
 ### Specialized Solutions | 专用解决方案
 
@@ -54,6 +63,16 @@ Add WeChat | 添加微信: **1796060717**
 |------|-------|-------------|-------|
 | [BentoVoiceAgent](https://github.com/bentoml/BentoVoiceAgent) | ![GitHub Repo stars](https://badgen.net/github/stars/bentoml/BentoVoiceAgent) | Build phone calling voice agents fully powered by open source models. Uses BentoML for deployment. | 完全基于开源模型 |
 | [LangGraph Voice Agent](https://github.com/Rajathbharadwaj/voice-agent) | ![GitHub Repo stars](https://badgen.net/github/stars/Rajathbharadwaj/voice-agent) | Voice AI SDR Agent for automated sales calls. Built with LangGraph, Twilio, and OpenAI. Production-ready with call routing, objection handling, and appointment scheduling. | LangGraph 架构，销售自动化 |
+| [RealtimeVoiceChat](https://github.com/KoljaB/RealtimeVoiceChat) | ![GitHub Repo stars](https://badgen.net/github/stars/KoljaB/RealtimeVoiceChat) | Browser-to-Python stack for ~500ms natural spoken conversation with local LLMs (Ollama). Built on RealtimeSTT + RealtimeTTS. | 本地语音对话栈，约 500ms 延迟 |
+
+### Commercial Speech-to-Speech Platforms | 商业语音平台
+
+| Name | Description | Notes |
+|------|-------------|-------|
+| [Hume EVI](https://www.hume.ai/empathic-voice-interface) | Empathic speech-to-speech foundation model (EVI 3) that reads and responds to emotion/prosody. 100,000+ customizable voices. | 共情语音模型，感知并回应情绪语调 |
+| [Amazon Nova Sonic](https://aws.amazon.com/ai/generative-ai/nova/) | AWS Bedrock speech-to-speech foundation model with polyglot voices, async tool calling, large context, LiveKit/Pipecat integrations. | AWS 语音到语音大模型，多语种同声、异步工具调用 |
+| [Speechmatics Flow](https://www.speechmatics.com/flow) | Conversational voice-agent API built on high-accuracy multilingual ASR with sentiment/tone awareness. | 基于高精度多语种 ASR 的对话语音 Agent API |
+| [Agora Conversational AI Engine](https://www.agora.io/en/products/conversational-ai-engine/) | Real-time RTC platform orchestrating ASR + any LLM + TTS for global low-latency voice agents. | 全球实时通信厂商的语音 Agent 引擎，低延迟 |
 ---
 
 ## VAD (Voice Activity Detection) | 语音活动检测
@@ -123,6 +142,13 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 | [faster-whisper](https://github.com/SYSTRAN/faster-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/SYSTRAN/faster-whisper) | Faster Whisper transcription with CTranslate2. Up to 4x faster than openai/whisper with less memory. INT8 quantization support. | ⭐ 工业级首选，4 倍加速，低内存 |
 | [NVIDIA Parakeet](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) | - | 600M-param FastConformer ASR model. Top of Hugging Face Open ASR leaderboard, accurate word-level timestamps, transcribes 60-min audio in one pass. | 准确率领先，长音频高效转录 |
 | [Moonshine](https://github.com/usefulsensors/moonshine) | ![GitHub Repo stars](https://badgen.net/github/stars/usefulsensors/moonshine) | Fast and accurate speech recognition optimized for on-device and edge. Variable-length input, lower latency than Whisper on short audio. | 端侧优化，短音频低延迟 |
+| [Kyutai STT](https://github.com/kyutai-labs/delayed-streams-modeling) | ![GitHub Repo stars](https://badgen.net/github/stars/kyutai-labs/delayed-streams-modeling) | Streaming-native STT (Delayed Streams Modeling); ~0.5s delay + semantic VAD, word-level timestamps, ~400 streams on one H100. Rust + MLX. | Kyutai 出品，专为实时语音代理设计的流式 ASR |
+| [NVIDIA NeMo](https://github.com/NVIDIA-NeMo/NeMo) | ![GitHub Repo stars](https://badgen.net/github/stars/NVIDIA-NeMo/NeMo) | Scalable speech/LLM framework, home of Parakeet (tops HF Open-ASR leaderboard) and Canary; cache-aware chunked streaming, multilingual. | 英伟达语音框架，Parakeet/Canary 的训练部署基座 |
+| [FunASR](https://github.com/modelscope/FunASR) | ![GitHub Repo stars](https://badgen.net/github/stars/modelscope/FunASR) | Alibaba industrial toolkit hosting Paraformer (non-autoregressive, ~120x real-time) with streaming, VAD, punctuation, diarization, 50+ languages. | 阿里达摩院工业级 ASR，中文效果强，支持流式 |
+| [SenseVoice](https://github.com/FunAudioLLM/SenseVoice) | ![GitHub Repo stars](https://badgen.net/github/stars/FunAudioLLM/SenseVoice) | Multilingual (50+ langs) ASR + emotion recognition + audio-event detection; non-autoregressive Small is ~15x faster than Whisper-large-v3. | 多语种语音理解，识别+情感+事件三合一 |
+| [whisper.cpp](https://github.com/ggml-org/whisper.cpp) | ![GitHub Repo stars](https://badgen.net/github/stars/ggml-org/whisper.cpp) | Plain C/C++ Whisper inference via ggml; zero-dependency, runs CPU/Metal/CUDA/Core ML. Ideal for on-device and low-latency local agents. | 纯 C/C++ Whisper 推理，零依赖跨平台，CPU 也能跑 |
+| [WhisperX](https://github.com/m-bain/whisperX) | ![GitHub Repo stars](https://badgen.net/github/stars/m-bain/whisperX) | Whisper + wav2vec2 forced alignment for accurate word-level timestamps, plus speaker diarization and VAD batching (70x real-time). | Whisper 加对齐，精确词级时间戳+说话人分离 |
+| [Distil-Whisper](https://github.com/huggingface/distil-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/huggingface/distil-whisper) | Distilled Whisper-large-v3, 6x faster and ~50% smaller within 1% WER. Good low-latency English choice. | HuggingFace 蒸馏版 Whisper，速度快 6 倍 |
 
 ### Commercial STT APIs | 商业 STT 服务
 
@@ -132,6 +158,8 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 | [Azure Speech Services](https://azure.microsoft.com/products/ai-services/speech-to-text) | Microsoft's STT service. Multi-language support, custom model training. | 支持多语言，自定义模型 |
 | [Deepgram](https://deepgram.com/) | Enterprise-grade real-time STT API. Ultra-low latency, streaming transcription. | 超低延迟，流式转录 |
 | [AssemblyAI](https://www.assemblyai.com/) | Speech AI API with Universal-Streaming model. Immutable transcription, intelligent endpointing. | 不可变转录，智能端点检测 |
+| [Speechmatics](https://www.speechmatics.com/) | Real-time ASR (Ursa 2) with sub-1s latency, strong accent/multilingual robustness, on-prem options. | 企业级实时 ASR，口音鲁棒，支持私有化 |
+| [Groq Whisper](https://groq.com/) | Whisper-large-v3/-turbo served on Groq LPUs for ultra-low-latency, very high-throughput transcription/translation. | Groq LPU 跑 Whisper，超低延迟高吞吐 |
 
 ---
 
@@ -152,6 +180,16 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 | [Fish-Speech](https://github.com/fishaudio/fish-speech) | ![GitHub Repo stars](https://badgen.net/github/stars/fishaudio/fish-speech) | SOTA open-source multilingual TTS. Zero-shot and few-shot voice cloning, low latency, no phoneme dependency. | 多语言，零样本克隆，低延迟 |
 | [F5-TTS](https://github.com/SWivid/F5-TTS) | ![GitHub Repo stars](https://badgen.net/github/stars/SWivid/F5-TTS) | Fairytaler that fakes fluent and faithful speech with flow matching. Fast, high-quality zero-shot voice cloning. | 基于 flow matching，零样本克隆 |
 | [ChatTTS](https://github.com/2noise/ChatTTS) | ![GitHub Repo stars](https://badgen.net/github/stars/2noise/ChatTTS) | Generative TTS model optimized for dialogue scenarios. Natural conversational prosody, fine-grained prosodic control. | 对话场景优化，自然韵律 |
+| [Chatterbox](https://github.com/resemble-ai/chatterbox) | ![GitHub Repo stars](https://badgen.net/github/stars/resemble-ai/chatterbox) | Resemble AI MIT-licensed TTS; Turbo variant ~75ms latency, 5-second voice cloning, emotion-exaggeration control, 23-language variant. | Resemble AI，MIT，75ms 超低延迟，5 秒克隆 |
+| [Orpheus TTS](https://github.com/canopyai/Orpheus-TTS) | ![GitHub Repo stars](https://badgen.net/github/stars/canopyai/Orpheus-TTS) | Llama-3B-based emotive TTS with ~200ms (down to ~100ms) streaming latency, zero-shot cloning, emotion/intonation tags. | Canopy Labs，Llama 架构，~200ms 流式低延迟 |
+| [IndexTTS2](https://github.com/index-tts/index-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/index-tts/index-tts) | Bilibili industrial zero-shot TTS, first AR model with precise duration control plus disentangled emotion/timbre control. | B站出品，工业级零样本+时长控制+情感音色解耦 |
+| [Spark-TTS](https://github.com/SparkAudio/Spark-TTS) | ![GitHub Repo stars](https://badgen.net/github/stars/SparkAudio/Spark-TTS) | Efficient 0.5B LLM-based single-stream TTS (BiCodec tokens); zero-shot cloning plus controllable speaker creation. | 单流 BiCodec+Qwen2.5，高效零样本克隆 |
+| [Higgs Audio v2](https://github.com/boson-ai/higgs-audio) | ![GitHub Repo stars](https://badgen.net/github/stars/boson-ai/higgs-audio) | Boson AI 3B foundation model (10M+ hrs); expressive multi-speaker dialogue, multilingual, voice cloning, can add background music. | Boson AI 音频基座，多说话人对话，表现力极强 |
+| [MegaTTS 3](https://github.com/bytedance/MegaTTS3) | ![GitHub Repo stars](https://badgen.net/github/stars/bytedance/MegaTTS3) | ByteDance lightweight (0.45B DiT) Apache-2.0 TTS; ultra-high-quality zero-shot cloning, Chinese/English code-switching. | 字节跳动，轻量 DiT，高质量中英零样本克隆 |
+| [Dia](https://github.com/nari-labs/dia) | ![GitHub Repo stars](https://badgen.net/github/stars/nari-labs/dia) | Nari Labs 1.6B model generating ultra-realistic multi-speaker dialogue in one pass with nonverbals (laughter, coughs). | Nari Labs，一次生成超真实多角色对话 |
+| [MeloTTS](https://github.com/myshell-ai/MeloTTS) | ![GitHub Repo stars](https://badgen.net/github/stars/myshell-ai/MeloTTS) | MyShell MIT-licensed multilingual library (EN/ES/FR/ZH/JA/KO), fast enough for CPU real-time inference. | MyShell，MIT，多语种 CPU 实时推理 |
+| [StyleTTS 2](https://github.com/yl4579/StyleTTS2) | ![GitHub Repo stars](https://badgen.net/github/stars/yl4579/StyleTTS2) | Style-diffusion + adversarial TTS reaching human-level quality and zero-shot speaker adaptation; a foundational OSS model. | 风格扩散+对抗训练达到人类水平，众多项目底座 |
+| [Parler-TTS](https://github.com/huggingface/parler-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/huggingface/parler-tts) | Hugging Face fully-open controllable TTS where voice traits (gender, pitch, rate, reverb) are set via a text description prompt. | HuggingFace 全开源，自然语言描述控制音色 |
 
 ### Commercial TTS APIs | 商业 TTS 服务
 
@@ -164,6 +202,10 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 | [Cartesia](https://cartesia.ai/) | Real-time streaming TTS. Ultra-low latency, natural intonation. | 超低延迟流式 TTS |
 | [Deepgram Aura-2](https://deepgram.com/product/text-to-speech) | Real-time text-to-speech. Conversational voice quality. | 对话式语音，低延迟 |
 | [voicetoinstrument.com](https://voicetoinstrument.com) | Convert voice to instrumental tracks using AI. Separate vocals and convert to instrument versions. | 语音转乐器音轨 |
+| [Hume AI Octave](https://www.hume.ai/) | First LLM-based "speech-language" TTS that understands context to set emotion/cadence; voice design from prompts. | 首个理解语义的 LLM-TTS，情感表现力强 |
+| [MiniMax (Hailuo) Speech](https://www.minimax.io/audio) | Speech-02/2.5/2.6 series, 40+ languages, 100+ voices + cloning; topped Speech Arena above OpenAI/ElevenLabs. | MiniMax 海螺，40+ 语种，多榜单第一 |
+| [Rime](https://rime.ai/) | Enterprise TTS for real-time voice agents; Mist v2 ~70-225ms TTFA, Arcana v2 for expressive paralinguistic voices. | 主打实时语音 Agent，极低延迟，发音确定性强 |
+| [PlayAI (PlayHT)](https://play.ai/) | Conversational-AI-focused API; Play 3.0 Mini ~143ms TTFB multilingual streaming, PlayDialog for two-speaker dialogue. | 面向对话 AI，低延迟流式，双人对话 |
 
 ---
 
@@ -171,16 +213,126 @@ OpenAI Whisper is the most powerful open-source speech recognition model, but do
 
 End-to-end speech models process audio input and produce audio output directly, without separate STT/LLM/TTS pipelines, enabling lower latency and richer paralinguistic understanding.
 
-端到端语音模型直接处理音频输入并输出音频，无需 STT/LLM/TTS 串联流水线，可实现更低延迟和更丰富的副语言理解。
+端到端语音模型直接处理音频输入并输出音频，无需 STT/LLM/TTS 串联流水线，可实现更低延迟和更丰富的副语言理解。这是 Voice Agent 的前沿方向。
+
+### Speech-to-Speech & Full-Duplex Models | 语音对话与全双工模型
 
 | Name | Stars | Description | Notes |
 |------|-------|-------------|-------|
 | [Moshi](https://github.com/kyutai-labs/moshi) | ![GitHub Repo stars](https://badgen.net/github/stars/kyutai-labs/moshi) | Full-duplex speech-text foundation model from Kyutai. Real-time dialogue with theoretical ~160ms latency, listens and speaks simultaneously. | ⭐ 全双工实时对话，超低延迟 |
-| [Qwen2.5-Omni](https://github.com/QwenLM/Qwen2.5-Omni) | ![GitHub Repo stars](https://badgen.net/github/stars/QwenLM/Qwen2.5-Omni) | End-to-end multimodal model from Alibaba. Perceives text, image, audio, video and generates text and natural speech in streaming. | 阿里全模态，流式语音生成 |
-| [GLM-4-Voice](https://github.com/THUDM/GLM-4-Voice) | ![GitHub Repo stars](https://badgen.net/github/stars/THUDM/GLM-4-Voice) | End-to-end Chinese-English speech model from THUDM. Low-latency conversation, controllable emotion, tone, and speed. | 智谱出品，中英双语，情感可控 |
+| [Qwen3-Omni](https://github.com/QwenLM/Qwen3-Omni) | ![GitHub Repo stars](https://badgen.net/github/stars/QwenLM/Qwen3-Omni) | Alibaba's latest natively end-to-end omni-modal LLM (text/audio/image/video in, text+speech out). 119 text languages, ~211ms audio latency, Apache 2.0. | 阿里最新原生全模态大模型，多语种实时语音生成 |
+| [Qwen2.5-Omni](https://github.com/QwenLM/Qwen2.5-Omni) | ![GitHub Repo stars](https://badgen.net/github/stars/QwenLM/Qwen2.5-Omni) | End-to-end multimodal model from Alibaba. Perceives text, image, audio, video and generates text and natural speech in streaming. | 阿里全模态，Thinker-Talker 架构，流式语音生成 |
+| [GLM-4-Voice](https://github.com/zai-org/GLM-4-Voice) | ![GitHub Repo stars](https://badgen.net/github/stars/zai-org/GLM-4-Voice) | End-to-end Chinese-English speech model from Zhipu. Low-latency conversation, controllable emotion, tone, speed and dialect. Apache 2.0. | 智谱出品，中英双语，情感语速方言可控 |
+| [NVIDIA PersonaPlex](https://github.com/NVIDIA/personaplex) | ![GitHub Repo stars](https://badgen.net/github/stars/NVIDIA/personaplex) | Real-time full-duplex speech-to-speech model that listens and talks simultaneously, with persona control via text role prompts + audio voice conditioning. Code MIT, weights NVIDIA Open Model License. Backbone of Nemotron 3 VoiceChat (#1 open full-duplex model on VoiceBench). | ⭐ 英伟达开源全双工 speech-to-speech 模型，边听边说+人设控制 |
+| [Step-Audio 2](https://github.com/stepfun-ai/Step-Audio2) | ![GitHub Repo stars](https://badgen.net/github/stars/stepfun-ai/Step-Audio2) | End-to-end speech-to-speech MLLM from StepFun; open Step-Audio-2-mini (8B, Apache 2.0) with CoT-RL and paralinguistic reasoning, reportedly surpassing GPT-4o-Audio. | 阶跃星辰，全开源 8B 语音对话模型，支持副语言推理 |
+| [Kimi-Audio](https://github.com/MoonshotAI/Kimi-Audio) | ![GitHub Repo stars](https://badgen.net/github/stars/MoonshotAI/Kimi-Audio) | Open 7B audio foundation model from Moonshot AI for ASR, audio QA, captioning, emotion recognition and end-to-end speech conversation. 13M+ hours pretraining. | 月之暗面通用音频基座，理解+对话一体 |
+| [LLaMA-Omni2](https://github.com/ictnlp/LLaMA-Omni2) | ![GitHub Repo stars](https://badgen.net/github/stars/ictnlp/LLaMA-Omni2) | Real-time SpeechLM series (0.5B-14B) on Qwen2.5 with autoregressive streaming speech decoder; ~583ms latency. ACL 2025. | 中科院计算所，自回归流式语音合成，数据极省 |
+| [Mini-Omni2](https://github.com/gpt-omni/mini-omni2) | ![GitHub Repo stars](https://badgen.net/github/stars/gpt-omni/mini-omni2) | Open GPT-4o-style omni model with vision+speech+duplex; real-time speech-to-speech with interruption, no external ASR/TTS. | 开源版 GPT-4o，支持视觉+语音+打断 |
+| [VITA-Audio](https://github.com/VITA-MLLM/VITA-Audio) | ![GitHub Repo stars](https://badgen.net/github/stars/VITA-MLLM/VITA-Audio) | Fast interleaved cross-modal token generation; first-audio-token latency to 53ms, 3-5x speedup at 7B. NeurIPS 2025. | 首 token 仅 53ms，3-5 倍加速，全开源数据训练 |
+| [Freeze-Omni](https://github.com/VITA-MLLM/Freeze-Omni) | ![GitHub Repo stars](https://badgen.net/github/stars/VITA-MLLM/Freeze-Omni) | Low-latency speech-to-speech with a frozen text LLM backbone (avoids catastrophic forgetting); chunk-wise streaming. ICML 2025. | 冻结 LLM 主干避免知识遗忘，低延迟流式对话 |
+| [Baichuan-Audio](https://github.com/baichuan-inc/Baichuan-Audio) | ![GitHub Repo stars](https://badgen.net/github/stars/baichuan-inc/Baichuan-Audio) | Unified end-to-end speech interaction framework (tokenizer + audio LLM + flow-matching decoder), 12.5Hz multi-codebook tokens. | 百川端到端语音交互统一框架 |
+| [SpeechGPT 2.0-preview](https://github.com/OpenMOSS/SpeechGPT-2.0-preview) | ![GitHub Repo stars](https://badgen.net/github/stars/OpenMOSS/SpeechGPT-2.0-preview) | End-to-end spoken dialogue LLM (7B) with <200ms latency, strong style/emotion control, tool calls and web search (Chinese-only). | 复旦 OpenMOSS，<200ms 延迟，多情感+工具调用 |
+| [SALMONN-omni](https://github.com/bytedance/SALMONN) | ![GitHub Repo stars](https://badgen.net/github/stars/bytedance/SALMONN) | First standalone codec-free full-duplex speech LLM; dynamic thinking for turn-taking, barge-in, echo cancellation. | 字节，无 codec 的独立全双工语音 LLM，支持打断 |
+| [Westlake-Omni](https://github.com/xinchen-ai/Westlake-Omni) | ![GitHub Repo stars](https://badgen.net/github/stars/xinchen-ai/Westlake-Omni) | Open-source Chinese emotional end-to-end speech model; unified discrete speech+text, low-latency simultaneous output. | 西湖心辰，开源中文情感语音交互模型 |
+| [Sesame CSM](https://github.com/SesameAILabs/csm) | ![GitHub Repo stars](https://badgen.net/github/stars/SesameAILabs/csm) | Conversational Speech Model generating Mimi audio codes from text+audio context (Llama backbone). Powers Sesame's natural voice demo. | Sesame 对话语音生成模型，上下文驱动，自然度极高 |
 | [Gemini Live API](https://ai.google.dev/gemini-api/docs/live) | - | Google's low-latency bidirectional voice and video API. Native audio understanding and generation, interruption handling, tool use. | Google 官方，原生音视频，支持打断 |
+| [OpenAI gpt-realtime](https://platform.openai.com/docs/guides/realtime) | - | Production speech-to-speech API; native audio comprehension, mid-sentence language switching, tool calling. | OpenAI 商用实时语音模型，闭源 API |
+
+### Audio Understanding Models | 语音理解模型 (audio-in, text-out)
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [Qwen2-Audio](https://github.com/QwenLM/Qwen2-Audio) | ![GitHub Repo stars](https://badgen.net/github/stars/QwenLM/Qwen2-Audio) | Large audio-language model with voice-chat and audio-analysis modes; SOTA without task-specific fine-tuning. | 阿里大规模音频语言模型，免微调即 SOTA |
+| [SALMONN](https://github.com/bytedance/SALMONN) | ![GitHub Repo stars](https://badgen.net/github/stars/bytedance/SALMONN) | Audio-text multimodal LLM perceiving speech, audio events and music via Whisper + BEATs dual encoders. ICLR 2024. | 字节+清华，语音/音频/音乐三模态理解 |
+| [Audio Flamingo 3](https://github.com/NVIDIA/audio-flamingo) | ![GitHub Repo stars](https://badgen.net/github/stars/NVIDIA/audio-flamingo) | NVIDIA fully-open 7B large audio-language model with unified speech/sound/music encoder, CoT reasoning, up to 10-min long-audio understanding. | 英伟达全开源大音频语言模型，长音频+推理 |
+| [Voxtral (Mistral)](https://mistral.ai/news/voxtral/) | - | Audio-input LLM (24B & 3B) for transcription, translation, Q&A, summarization; 32k context, multilingual, function calling. Apache 2.0 weights. | Mistral 音频理解模型，转写/翻译/问答一体 |
 
 ---
+
+## Voice MCP & Coding Agent Voice | 语音 MCP 与编程 Agent 语音
+
+Talk to (and be talked to by) AI coding assistants like Claude Code, Cursor and Codex. Covers MCP speech servers, voice plugins, and dictation tools developers actually use.
+
+让你能用语音与 Claude Code, Cursor, Codex 等编程 Agent 对话，收录语音 MCP 服务、语音插件与开发者高频使用的听写工具。
+
+### Voice MCP Servers | 语音 MCP 服务
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [Voice Mode (VoiceMode)](https://github.com/mbailey/voicemode) | ![GitHub Repo stars](https://badgen.net/github/stars/mbailey/voicemode) | MCP server giving Claude Code and any MCP agent full natural voice conversations; Whisper STT + OpenAI/Kokoro TTS, can run fully local. MIT. | ⭐ 给 Claude Code 加"打电话式"语音对话，最成熟的语音 MCP |
+| [ElevenLabs MCP](https://github.com/elevenlabs/elevenlabs-mcp) | ![GitHub Repo stars](https://badgen.net/github/stars/elevenlabs/elevenlabs-mcp) | Official ElevenLabs MCP server: TTS, transcription, voice cloning, outbound voice agents. Works with Claude Desktop/Cursor/Windsurf. | 官方 ElevenLabs MCP，高质量 TTS+克隆+外呼，生态最广 |
+| [speech-mcp](https://github.com/Kvadratni/speech-mcp) | ![GitHub Repo stars](https://badgen.net/github/stars/Kvadratni/speech-mcp) | Goose MCP voice extension with audio visualization, faster-whisper STT + Kokoro TTS (54+ voices), continuous conversation, all local. | 为 Goose 打造的本地语音 MCP，带可视化，54+ 音色 |
+| [mcp-tts](https://github.com/blacktop/mcp-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/blacktop/mcp-tts) | MCP server exposing multiple TTS backends (ElevenLabs, OpenAI, Google, macOS `say`) to agents. Go, MIT. | 一个 MCP 接多家 TTS（含本地 say），让 Agent 开口 |
+| [mcp-server-whisper](https://github.com/arcaputo3/mcp-server-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/arcaputo3/mcp-server-whisper) | MCP server for audio transcription/processing using OpenAI Whisper + GPT-4o audio. MIT. | 用 Whisper/GPT-4o 做转写的 MCP，给 Agent 加"耳朵" |
+| [claude-code-tts](https://github.com/ybouhjira/claude-code-tts) | ![GitHub Repo stars](https://badgen.net/github/stars/ybouhjira/claude-code-tts) | TTS MCP plugin specifically for Claude Code — audio feedback while coding via OpenAI TTS, non-blocking worker pool. MIT. | 专为 Claude Code 的 TTS 插件，编码时听语音反馈 |
+
+### Coding Agent Voice Tools | 编程 Agent 语音工具
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [OpenClaw](https://github.com/openclaw/openclaw) | ![GitHub Repo stars](https://badgen.net/github/stars/openclaw/openclaw) | Local-first personal AI assistant across WhatsApp/Telegram/Slack/Discord/iMessage etc., with native Voice Wake + Talk Mode and a large voice-plugin ecosystem. | 🦞 现象级本地 AI 助手，原生语音唤醒+对话，语音插件生态繁荣 |
+| [VoxClaw](https://github.com/malpern/VoxClaw) | ![GitHub Repo stars](https://badgen.net/github/stars/malpern/VoxClaw) | macOS menu-bar app/CLI giving OpenClaw a voice (Apple/OpenAI/ElevenLabs TTS), teleprompter overlay, network API. MIT. | 给 OpenClaw 配音的 Mac 菜单栏应用，多 TTS 后端 |
+| [openclaw-voice](https://github.com/Purple-Horizons/openclaw-voice) | ![GitHub Repo stars](https://badgen.net/github/stars/Purple-Horizons/openclaw-voice) | Self-hosted browser voice chat for AI assistants, Whisper STT + ElevenLabs TTS, works with OpenAI/Claude/custom. MIT. | 浏览器端自托管语音聊天，私有免费 |
+| [claude-whisper](https://github.com/Ashton-Sidhu/claude-whisper) | ![GitHub Repo stars](https://badgen.net/github/stars/Ashton-Sidhu/claude-whisper) | Push-to-talk (hold ESC) voice control for Claude Code — wake word + command transcribed and run via Claude Agent SDK. | 按住 ESC 说话，唤醒词+指令直接驱动 Claude Code |
+| [voice-to-claude](https://github.com/enesbasbug/voice-to-claude) | ![GitHub Repo stars](https://badgen.net/github/stars/enesbasbug/voice-to-claude) | Claude Code plugin for high-quality dictation via whisper.cpp with Metal GPU accel; hold Ctrl+Alt to record. MIT. | whisper.cpp+Metal 加速的 Claude Code 本地听写插件 |
+| [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) | ![GitHub Repo stars](https://badgen.net/github/stars/BloopAI/vibe-kanban) | Kanban orchestration for Claude Code / Codex / Gemini CLI agents; pairs naturally with voice dictation for hands-free planning. | 统一编排 Claude Code/Codex 等 Agent 的看板，配语音全程动嘴 |
+
+> **Note | 提示**: Claude Code now ships native voice dictation / push-to-talk; the tools above add richer two-way conversation, wake words and TTS feedback on top. | Claude Code 已内置原生语音听写，上述工具在此之上提供更丰富的双向对话、唤醒词与语音反馈。
+
+### Commercial Dictation | 商业听写工具
+
+| Name | Description | Notes |
+|------|-------------|-------|
+| [Wispr Flow](https://wisprflow.ai/) | Cloud AI dictation (Mac/Win/iOS/Android), auto-edits filler/grammar; dedicated Cursor & Windsurf extensions to tag files/run commands by voice. | 开发者最热门 AI 听写，深度集成 Cursor/Windsurf |
+| [superwhisper](https://superwhisper.com/) | Mac-only, privacy-first dictation running Whisper fully on-device; system-wide. | Mac 本地 Whisper 听写，隐私优先，离线可用 |
+
+---
+
+## Toolkits, Wake Word & Voice Conversion | 语音工具箱, 唤醒词与变声
+
+High-star, general-purpose voice/speech projects: end-to-end toolkits, wake-word detection, voice cloning and conversion.
+
+高星通用语音项目：一体化工具箱、唤醒词检测、声音克隆与变声。
+
+### Speech Toolkits & Libraries | 语音工具箱与库
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [SpeechBrain](https://github.com/speechbrain/speechbrain) | ![GitHub Repo stars](https://badgen.net/github/stars/speechbrain/speechbrain) | All-in-one PyTorch speech toolkit (ASR, TTS, diarization, enhancement, speaker ID). Apache-2.0. | 一体化 PyTorch 语音工具箱 |
+| [ESPnet](https://github.com/espnet/espnet) | ![GitHub Repo stars](https://badgen.net/github/stars/espnet/espnet) | End-to-end speech processing toolkit covering ASR, TTS, speech translation, enhancement and SLU. | 端到端语音处理工具箱，覆盖 ASR/TTS/翻译 |
+| [vosk-api](https://github.com/alphacep/vosk-api) | ![GitHub Repo stars](https://badgen.net/github/stars/alphacep/vosk-api) | Offline STT for Android/iOS/RPi/servers, many languages and bindings. Apache-2.0. | 离线 STT，跨平台多语言绑定 |
+| [RealtimeSTT](https://github.com/KoljaB/RealtimeSTT) | ![GitHub Repo stars](https://badgen.net/github/stars/KoljaB/RealtimeSTT) | Low-latency STT library with advanced VAD, wake-word activation and instant transcription. A core voice-agent building block. | 低延迟实时 STT，带 VAD 与唤醒词，Agent 基础组件 |
+| [RealtimeTTS](https://github.com/KoljaB/RealtimeTTS) | ![GitHub Repo stars](https://badgen.net/github/stars/KoljaB/RealtimeTTS) | Low-latency TTS library streaming strings/LLM token streams to audio with multi-engine fallback. | 低延迟流式 TTS，可流式播放 LLM token |
+| [OpenVoiceOS (ovos-core)](https://github.com/OpenVoiceOS/ovos-core) | ![GitHub Repo stars](https://badgen.net/github/stars/OpenVoiceOS/ovos-core) | FOSS voice-assistant OS platform, the actively-maintained Mycroft successor. Apache-2.0. | FOSS 语音助手系统（Mycroft 继任者）|
+
+### Wake Word Detection | 唤醒词检测
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [openWakeWord](https://github.com/dscripka/openWakeWord) | ![GitHub Repo stars](https://badgen.net/github/stars/dscripka/openWakeWord) | Open-source wake-word/phrase detection, performance-focused and simple to train custom words. Apache-2.0. | 开源唤醒词检测，注重性能，易训练自定义词 |
+| [Porcupine](https://github.com/Picovoice/porcupine) | ![GitHub Repo stars](https://badgen.net/github/stars/Picovoice/porcupine) | On-device deep-learning wake-word detection engine by Picovoice. Cross-platform, Apache-2.0. | Picovoice 端侧深度学习唤醒词检测 |
+
+### Voice Cloning & Conversion | 声音克隆与变声
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [OpenVoice](https://github.com/myshell-ai/OpenVoice) | ![GitHub Repo stars](https://badgen.net/github/stars/myshell-ai/OpenVoice) | Instant voice cloning audio foundation model by MIT + MyShell; flexible style control, cross-lingual. MIT. | MIT×MyShell 即时声音克隆基础模型 |
+| [RVC WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | ![GitHub Repo stars](https://badgen.net/github/stars/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | Train a good voice-conversion model from ≤10 min of data. Hugely popular. MIT. | ≤10 分钟数据训练高质量变声模型 |
+| [voice-changer](https://github.com/w-okada/voice-changer) | ![GitHub Repo stars](https://badgen.net/github/stars/w-okada/voice-changer) | Real-time voice changer supporting RVC, so-vits-svc and other backends. | 实时变声器，支持多种模型后端 |
+| [MockingBird](https://github.com/babysor/MockingBird) | ![GitHub Repo stars](https://badgen.net/github/stars/babysor/MockingBird) | Clone a (esp. Chinese) voice in ~5s for real-time speech. Very popular in the CN community. | 5 秒克隆音色实时合成，中文社区代表作 |
+
+### CLI & Local Dictation Tools | 命令行与本地听写工具
+
+| Name | Stars | Description | Notes |
+|------|-------|-------------|-------|
+| [Handy](https://github.com/cjpais/Handy) | ![GitHub Repo stars](https://badgen.net/github/stars/cjpais/Handy) | Free, fully-offline push-to-talk dictation app (Tauri/Rust) for Win/Mac/Linux using Whisper + Parakeet, auto-pasting into any field. | 全离线按键说话听写，跨平台，自动粘贴 |
+| [vibe](https://github.com/thewh1teagle/vibe) | ![GitHub Repo stars](https://badgen.net/github/stars/thewh1teagle/vibe) | Cross-platform offline audio/video transcription (90+ languages, diarization) with CLI and HTTP API. | 跨平台离线音视频转录，含 CLI 与 HTTP API |
+| [WhisperWriter](https://github.com/savbell/whisper-writer) | ![GitHub Repo stars](https://badgen.net/github/stars/savbell/whisper-writer) | Small Python dictation app: hotkey listens, then auto-types Whisper transcription into the active window. | 轻量 Python 听写，热键触发自动输入 |
+| [nerd-dictation](https://github.com/ideasman42/nerd-dictation) | ![GitHub Repo stars](https://badgen.net/github/stars/ideasman42/nerd-dictation) | Single-file, hackable offline speech-to-text for Linux using VOSK, with Python-based text post-processing. | 单文件可魔改的 Linux 离线听写 |
+| [wyoming-satellite](https://github.com/rhasspy/wyoming-satellite) | ![GitHub Repo stars](https://badgen.net/github/stars/rhasspy/wyoming-satellite) | Remote voice satellite (Wyoming protocol) for Home Assistant on Raspberry Pi with local wake-word detection. | Home Assistant 远程语音卫星，树莓派+本地唤醒词 |
+
+---
+
 ## Developer Communities & Resources | 开发者社区与资源
 
 ### Communities | 社区平台
